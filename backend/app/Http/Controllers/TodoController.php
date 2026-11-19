@@ -22,7 +22,7 @@ class TodoController extends Controller
 
         $todo = Todo::create($data);
 
-        return response()->json($todo, 201);
+        return response()->json($todo->refresh(), 201);
     }
 
     public function export(Request $request)
