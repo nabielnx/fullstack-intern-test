@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "0217c70f-0536-46dc-a61b-e6cff765bff9",
+		"name": "fullstack-test-intern",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49660717",
+		"_collection_link": "https://zaimunnabil1-8855994.postman.co/workspace/Muhammad-Za'iimun-Nabiil's-Work~5a744665-45c3-4a11-8553-7b28581a7010/collection/49660717-0217c70f-0536-46dc-a61b-e6cff765bff9?action=share&source=collection_link&creator=49660717"
+	},
+	"item": [
+		{
+			"name": "Create Todos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Cek default status\",\r\n  \"assignee\": \"Reza\",\r\n  \"due_date\": \"2026-12-12\",\r\n  \"priority\": \"medium\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Created – Todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Siapkan presentasi\",\r\n  \"assignee\": \"Nabil\",\r\n  \"due_date\": \"2026-12-01\",\r\n  \"time_tracked\": 1.5,\r\n  \"status\": \"open\",\r\n  \"priority\": \"high\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/todos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.31"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Nov 2026 10:40:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Siapkan presentasi\",\n    \"assignee\": \"Nabil\",\n    \"due_date\": \"2026-12-01\",\n    \"time_tracked\": 1.5,\n    \"status\": \"open\",\n    \"priority\": \"high\",\n    \"updated_at\": \"2026-11-19T10:40:00.000000Z\",\n    \"created_at\": \"2026-11-19T10:40:00.000000Z\",\n    \"id\": 5\n}"
+				}
+			]
+		},
+		{
+			"name": "Export Todos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todos/export?title=Siapkan&priority=high",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todos",
+						"export"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Siapkan"
+						},
+						{
+							"key": "priority",
+							"value": "high"
+						},
+						{
+							"key": "assignee",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "start",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "end",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "min",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "max",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
